@@ -54,13 +54,12 @@ It is clear that the URDF needs an update. Here's a minimal set of new features 
 
 ### Suggested solution
 
-The suggested solution is to borrow heavily from the following sources:
+The suggested solution is to borrow heavily from the following sources to create a URDF format coupled with a new __WORLD__ format to specify both the robot and the state of the world (including the robots in it). 
 
 1. SDF
 1. MoveIt! config
 1. ROS-Control config
 
-to create a URDF format coupled with a new __WORLD__ format to specify both the robot and the state of the world (including the robots in it). 
 
 Issue|Suggested Solution|Source(s)|Notes|
 -----|-----|-----|---|
