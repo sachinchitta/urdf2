@@ -64,5 +64,7 @@ The suggested solution is to borrow heavily from the following sources to create
 Issue|Suggested Solution|Source(s)|Notes|
 -----|-----|-----|---|
 World specification|Add a new world format (separate from URDF)|(a) SDF (b) MoveIt! Planning Scene|Allow multiple robot tags|
-
-
+Closed loops|Allow for a closed loop chain specification in URDF|SDF ||
+Groups|Add native spec for groups in URDF|MoveIt!|Group names are namespaced inside robot name, e.g. PRX/right_arm to allow groups to be composeable|
+Sensors|Add most common sensors into URDF|SDF||
+Robot State|Add ability to specify robot state in URDF and world state in new World format|MoveIt!, SDF||
