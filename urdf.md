@@ -63,7 +63,7 @@ The suggested solution is to borrow heavily from the following sources:
 to create a URDF format coupled with a new __WORLD__ format to specify both the robot and the state of the world (including the robots in it). 
 
 Issue|Suggested Solution|Source(s)|Notes|
-|-----|-----|-----|
+-----|-----|-----|---|
 World specification|Add a new world format (separate from URDF)|(a) SDF (b) MoveIt! Planning Scene|Allow multiple robot tags|
 
 
