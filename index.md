@@ -89,6 +89,8 @@ The suggested solution is to borrow heavily from the following sources to create
 * Allow robot state to be specified in URDF
 * Borrow directly from MoveIt! SRDF
 
-
+|---
 |Test 1| Test 2|
-|- test|- test -|
+|-|:-|
+|test|test |
+|===
