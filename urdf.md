@@ -1,3 +1,7 @@
+---
+layout: index
+title: URDF2
+---
 ### Introduction
 The URDF (Universal Robot Description Format) has not been updated in quite a while. Although it has served the ROS community admirably, it has several notable shortcomings. In this effort, we will try to modify the URDF specification to catch up with the needs of the ROS community
 
