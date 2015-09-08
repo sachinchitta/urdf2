@@ -1,10 +1,2 @@
-defaults:
-    -
-        scope:
-            path: ""
-            type: pages
-        values:
-            layout: index
-
-url: file:///tmp/foo
-highlighter: rouge
+name: URDF 2.0 Proposal, Sachin Chitta
+markdown: kramdown
