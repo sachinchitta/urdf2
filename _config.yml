@@ -4,7 +4,7 @@ defaults:
             path: ""
             type: pages
         values:
-            layout: default
+            layout: index
 
 url: file:///tmp/foo
 highlighter: rouge
