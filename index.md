@@ -57,6 +57,7 @@ It is clear that the URDF needs an update. Here's a minimal set of new features 
 1. Groups - URDF should natively support the specification of groups (user-defined sets of joints). This will significantly reduce configuration effort for upstream elements, e.g. MoveIt! or ROS-Control and also ensure consistency, e.g. there are too many places where lists of joints are currently specified in config files. 
 1. Sensors - URDF must include support for the most commonly used sensors. 
 1. Zero State/Default State/Saved state - The URDF should include support for specifying the _initial_ or _default_ state of a robot.  
+1. Versioning - Support for versions.
 
 ## Suggested solution
 
