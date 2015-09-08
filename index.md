@@ -54,17 +54,13 @@ It is clear that the URDF needs an update. Here's a minimal set of new features 
 
 1. Multiple robots - The URDF currently supports a single _robot_ tag. We compose multiple robots into a single robot description by using Xacro and manually adding joints between robots, i.e. we treat a collection of robots as a single robot. MoveIt! uses groups to then allow users to address each part of the robot as a single entity. It is not clear that the URDF needs to allow multiple robot tags. However, there is a need for being able to parse some _world description_ and know all the robots that exist in the world. 
 1. Closed loop chains - The URDF must be able to support the specification of closed loops, e.g. four-bar linkages or delta robots. 
-* Groups - URDF should natively support the specification of groups (user-defined sets of joints). This will significantly reduce configuration effort for upstream elements, e.g. MoveIt! or ROS-Control and also ensure consistency, e.g. there are too many places where lists of joints are currently specified in config files. 
-* Sensors - URDF must include support for the most commonly used sensors. 
-* Zero State/Default State/Saved state - The URDF should include support for specifying the _initial_ or _default_ state of a robot.  
+1. Groups - URDF should natively support the specification of groups (user-defined sets of joints). This will significantly reduce configuration effort for upstream elements, e.g. MoveIt! or ROS-Control and also ensure consistency, e.g. there are too many places where lists of joints are currently specified in config files. 
+1. Sensors - URDF must include support for the most commonly used sensors. 
+1. Zero State/Default State/Saved state - The URDF should include support for specifying the _initial_ or _default_ state of a robot.  
 
-### Suggested solution
+## Suggested solution
 
 The suggested solution is to borrow heavily from the following sources to create a URDF format coupled with a new __WORLD__ format to specify both the robot and the state of the world (including the robots in it). 
-
-1. SDF
-1. MoveIt! config
-1. ROS-Control config
 
 #### World Specification
 * Add a new world format (separate from URDF)
@@ -90,4 +86,3 @@ The suggested solution is to borrow heavily from the following sources to create
 #### Robot State
 * Allow robot state to be specified in URDF
 * Borrow directly from [MoveIt! SRDF](https://github.com/ros-planning/moveit_pr2/blob/indigo-devel/pr2_moveit_config/config/pr2.srdf)
-
