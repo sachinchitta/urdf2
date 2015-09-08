@@ -1,1 +1,10 @@
-markdown: redcarpet
+defaults:
+    -
+        scope:
+            path: ""
+            type: pages
+        values:
+            layout: default
+
+url: file:///tmp/foo
+highlighter: rouge
