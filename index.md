@@ -64,11 +64,26 @@ The suggested solution is to borrow heavily from the following sources to create
 1. MoveIt! config
 1. ROS-Control config
 
+#### World Specification
+__Solution:__ Add a new world format (separate from URDF)
+__Sources:__ (a) SDF (b) MoveIt! Planning Scene
+__Notes:__ Allow multiple robot tags
 
-Issue|Suggested Solution|Source(s)|Notes|
------|-----|-----|---|
-World specification|Add a new world format (separate from URDF)|(a) SDF (b) MoveIt! Planning Scene|Allow multiple robot tags|
-Closed loops|Allow for a closed loop chain specification in URDF|SDF ||
-Groups|Add native spec for groups in URDF|MoveIt!|Group names are namespaced inside robot name, e.g. PRX/right_arm to allow groups to be composeable|
-Sensors|Add most common sensors into URDF|SDF||
-Robot State|Add ability to specify robot state in URDF and world state in new World format|MoveIt!, SDF||
+#### Closed loop chains
+__Solution:__ Allow closed loop chains
+__Sources:__ SDF
+
+#### Groups
+__Solution:__ Add native ability to specify and designate groups in URDF
+__Sources:__ MoveIt! groups specification (SRDF)
+__Notes:__ Make sure group names are namespaces inside robot name, e.g. PRX/right_arm to allow multiple robots to exist together in a world
+
+#### Sensors
+__Solution:__ Add ability to specify most common types of sensors in URDF
+__Sources:__ SDF
+
+#### Robot State
+__Solution:__ Allow robot state to be specified in URDF
+__ Sources:__ MoveIt! SRDF
+
+
