@@ -1,6 +1,6 @@
 ---
 layout: default
-title: URDF2
+title: 
 ---
 ### Introduction
 The URDF (Universal Robot Description Format) has not been updated in quite a while. Although it has served the ROS community admirably, it has several notable shortcomings. In this effort, we will try to modify the URDF specification to catch up with the needs of the ROS community. There are two parts to the URDF: (a) The XML format itself, (b) The URDF parser.
@@ -76,7 +76,7 @@ The suggested solution is to borrow heavily from the following sources to create
 
 #### Groups
 * Add native ability to specify and designate groups in URDF
-* Borrow directly from MoveIt! groups specification [SRDF] (https://github.com/ros-planning/moveit_pr2/blob/indigo-devel/pr2_moveit_config/config/pr2.srdf)
+* Borrow directly from MoveIt! groups specification [SRDF](https://github.com/ros-planning/moveit_pr2/blob/indigo-devel/pr2_moveit_config/config/pr2.srdf)
 * Make sure group names are namespaced inside robot name, e.g. robot1/right_arm to allow multiple robots to exist together in a world.
 
 #### Sensors
