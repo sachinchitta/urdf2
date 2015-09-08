@@ -1,2 +1,3 @@
 name: URDF 2.0 Proposal, Sachin Chitta
-markdown: kramdown
+markdown: maruku
+pygments: true
