@@ -68,29 +68,26 @@ The suggested solution is to borrow heavily from the following sources to create
 
 #### World Specification
 * Add a new world format (separate from URDF)
-* Borrow from: (a) SDF (b) MoveIt! Planning Scene
-* Allow multiple robot tags
+* Borrow from: (a) [SDF World](http://sdformat.org/spec?ver=1.5&elem=world) (b) [MoveIt! Planning Scene](https://github.com/ros-planning/moveit_msgs/blob/indigo-devel/msg/PlanningScene.msg)
+* Allow multiple robot tags in a world
+* Note that the core URDF robot tag itself does not need to change
+* What will potentially change is the way robot description is specified and read by nodes through the URDF parser.
 
 #### Closed loop chains
-* Allow closed loop chains - this mostly affects things like kinematics solvers
-* Borrow notation from SDF
-
+* Allow closed loop chains - this can be achieved by allowing two different joints to have the same child link but different parents
+* SDF supports something similar (see the PR2 gripper closed loop [here](https://bitbucket.org/osrf/gazebo_models/src/68989fe22ddc430909763eace37d45a4a4936e25/pr2_gripper/model.sdf?at=default).
+* It does not seem like this will require a syntax change. 
 
 #### Groups
 * Add native ability to specify and designate groups in URDF
-* Borrow directly from MoveIt! groups specification (SRDF)
-* Make sure group names are namespaced inside robot name, e.g. PRX/right_arm to allow multiple robots to exist together in a world
+* Borrow directly from MoveIt! groups specification [SRDF] (https://github.com/ros-planning/moveit_pr2/blob/indigo-devel/pr2_moveit_config/config/pr2.srdf)
+* Make sure group names are namespaced inside robot name, e.g. robot1/right_arm to allow multiple robots to exist together in a world.
 
 #### Sensors
 * Add ability to specify most common types of sensors in URDF
-* Borrow directly from SDF
+* Borrow directly from [SDF](http://sdformat.org/spec?ver=1.5&elem=sensor)
 
 #### Robot State
 * Allow robot state to be specified in URDF
-* Borrow directly from MoveIt! SRDF
+* Borrow directly from [MoveIt! SRDF](https://github.com/ros-planning/moveit_pr2/blob/indigo-devel/pr2_moveit_config/config/pr2.srdf)
 
-|---
-|Test 1| Test 2|
-|-|:-|
-|test|test |
-|===
