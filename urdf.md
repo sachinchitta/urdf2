@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: default
 title: URDF2
 ---
 ### Introduction
