@@ -3,7 +3,11 @@ layout: default
 title: URDF2
 ---
 ### Introduction
-The URDF (Universal Robot Description Format) has not been updated in quite a while. Although it has served the ROS community admirably, it has several notable shortcomings. In this effort, we will try to modify the URDF specification to catch up with the needs of the ROS community
+The URDF (Universal Robot Description Format) has not been updated in quite a while. Although it has served the ROS community admirably, it has several notable shortcomings. In this effort, we will try to modify the URDF specification to catch up with the needs of the ROS community. There are two parts to the URDF: 
+1. The XML format itself
+1. The URDF parser
+
+This document currently addresses only the URDF format itself. 
 
 ### Shortcomings
 * Multiple robots - The URDF currently supports a single _robot_ tag. Putting multiple robots together into a URDF can only be done by combining them (manually or through the use of Xacro) into a single robot element. 
