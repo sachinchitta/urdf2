@@ -14,6 +14,7 @@ This document currently addresses only the URDF format itself.
 * Sensors - URDF has no support for sensors. 
 * Zero State/Default State - The URDF defaults the initial state of a robot to zero joint values. This might be an issue for certain robots since the zero joint value might not be reachable. 
 * Saved states - The URDF does not support the storing of named states for the robot(s), e.g. HOME or READY.
+* Vacuum joints - The URDF has no support for vacuum joints - i.e. binary joints that are essentially On/Off.  
 
 ### Alternatives
 
@@ -87,3 +88,4 @@ The suggested solution is to borrow heavily from the following sources to create
 #### Robot State
 * Allow robot state to be specified in URDF
 * Borrow directly from [MoveIt! SRDF](https://github.com/ros-planning/moveit_pr2/blob/indigo-devel/pr2_moveit_config/config/pr2.srdf)
+
